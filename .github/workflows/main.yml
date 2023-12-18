@@ -13,20 +13,4 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '14'
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Run Tests
-        run: npm test
-
-  deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Deploy to Production
-        # Add your deployment steps here
+      # Add other build steps as needed
