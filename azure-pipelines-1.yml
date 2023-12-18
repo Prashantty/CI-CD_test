@@ -13,7 +13,7 @@ variables:
   dockerRegistryServiceConnection: '15be0e3b-845c-4f2c-97ad-c112aa56d0fd'
   imageRepository: 'containerrg91image'
   containerRegistry: 'containerrg91.azurecr.io'
-  dockerfilePath: '**/Dockerfile'
+  dockerfilePath: '/vsts/agent/_work/5/s/Dockerfile'
   tag: '$(Build.BuildId)'
 
   # Agent VM image name
