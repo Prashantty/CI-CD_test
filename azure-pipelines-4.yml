@@ -36,3 +36,10 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
+          - task: DockerCompose@0
+            inputs:
+              containerregistrytype: 'Azure Container Registry'
+              azureSubscription: 'Free Trial (900fe574-a917-4616-9d8e-70de70c8db1c)'
+              azureContainerRegistry: '{"loginServer":"dockertestcontainer1.azurecr.io", "id" : "/subscriptions/900fe574-a917-4616-9d8e-70de70c8db1c/resourceGroups/container_docker_test/providers/Microsoft.ContainerRegistry/registries/dockertestcontainer1"}'
+              dockerComposeFile: '**/docker-compose.yml'
+              action: 'Run a Docker Compose command'
